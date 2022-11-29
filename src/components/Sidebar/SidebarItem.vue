@@ -2,8 +2,10 @@
 import { computed } from "vue";
 import BadgeVue from "@components/Base/Badge.vue";
 import type { BadgeTone } from "~types/ui";
+import { RouterLink } from "vue-router";
 
 export interface Props {
+  as?: string;
   title: string;
   link?: string;
   active?: boolean;
@@ -20,6 +22,14 @@ const props = withDefaults(defineProps<Props>(), {
   tone: "neutral",
 });
 
+const buttonType = computed(() => {
+  if (props.as) return props.as;
+  if (props.link) {
+    return props.link.startsWith("http") ? "a" : RouterLink;
+  }
+  return "button";
+});
+
 const state = computed(() => {
   if (props.disabled) {
     return "text-black-500 pointer-events-none";
@@ -33,8 +43,9 @@ const state = computed(() => {
 
 <template>
   <component
-    :is="link ? 'a' : 'button'"
+    :is="buttonType"
     :href="link"
+    :to="link"
     class="flex items-center w-full px-4 py-2 text-sm rounded-lg gap-x-3"
     :class="state"
   >
