@@ -11,6 +11,8 @@ defineProps<{
         {{ title }}
       </h1>
     </section>
-    <slot> </slot>
+    <section>
+      <slot> </slot>
+    </section>
   </main>
 </template>
