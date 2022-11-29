@@ -71,7 +71,7 @@ const publishedPosts = [
           class="grid grid-cols-4 gap-5 py-4 border-t border-black-200 last:border-b hover:bg-black-100/50 px-6 cursor-pointer"
         >
           <div class="col-span-2">
-            <h3 class="text-black-800 text-lg font-semibold">
+            <h3 class="text-black-800 text-lg font-medium">
               {{ post.title }}
             </h3>
             <p class="truncate text-black-600 text-sm tracking-wide">
