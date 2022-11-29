@@ -17,14 +17,14 @@ const orgName = "Chatwoot";
 
 <template>
   <div
-    class="bg-white h-screen p-3 pt-5 flex flex-col drop-shadow-sm border-r border-gray-100"
+    class="bg-white h-screen p-3 pt-5 flex flex-col drop-shadow-sm border-r border-black-100"
   >
     <div class="flex justify-between items-center p-2">
       <button
         class="flex gap-x-2 items-center hover:bg-gray-100 p-1 rounded-lg"
       >
         <div
-          class="rounded-lg bg-gradient-to-t from-indigo-400 to-indigo-200 w-6 h-6"
+          class="rounded-lg bg-gradient-to-t from-blue-600 to-blue-400 w-6 h-6"
         ></div>
         <span class="font-normal text-sm leading-none">{{ orgName }}</span>
       </button>
@@ -56,10 +56,10 @@ const orgName = "Chatwoot";
             <span class="h-2 w-2 bg-green-500 rounded-full mx-1"></span>
           </SidebarItem>
           <SidebarItem title="Improvements">
-            <span class="h-2 w-2 bg-sky-500 rounded-full mx-1"></span>
+            <span class="h-2 w-2 bg-blue-500 rounded-full mx-1"></span>
           </SidebarItem>
           <SidebarItem title="Fixed">
-            <span class="h-2 w-2 bg-purple-500 rounded-full mx-1"></span>
+            <span class="h-2 w-2 bg-red-500 rounded-full mx-1"></span>
           </SidebarItem>
         </SidebarGroup>
       </div>

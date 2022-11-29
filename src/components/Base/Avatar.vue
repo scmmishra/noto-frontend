@@ -31,7 +31,7 @@ export default defineComponent({
     />
     <span
       v-if="hasBadge"
-      class="absolute h-2.5 w-2.5 -bottom-px -right-px bg-emerald-400 border-2 border-white rounded-full"
+      class="absolute h-2.5 w-2.5 -bottom-px -right-px bg-green-400 border-2 border-white rounded-full"
     ></span>
   </button>
 </template>
