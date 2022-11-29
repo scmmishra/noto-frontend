@@ -19,6 +19,9 @@ onMounted(() => {
 function getHeight(value: number) {
   return (value / maxValue) * 200;
 }
+function getDuration(value: number) {
+  return (value / maxValue) * 100 + 200;
+}
 </script>
 
 <template>
@@ -28,8 +31,12 @@ function getHeight(value: number) {
       class="border-dotted border-r first:border-l border-black-200 flex items-end justify-center hover:bg-black-100"
     >
       <div
-        :style="{ height: `${getHeight(count)}px`, maxHeight }"
-        class="w-2 rounded-full bg-pink-500 my-2 transition-all duration-300 ease-in-out"
+        :style="{
+          height: `${getHeight(count)}px`,
+          maxHeight,
+          transitionDuration: `${getDuration(count)}ms`,
+        }"
+        class="w-2 rounded-full bg-pink-500 my-2 transition-[max-height] ease-in-out"
       ></div>
     </div>
   </div>
