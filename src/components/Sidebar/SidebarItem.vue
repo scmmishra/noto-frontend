@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import BadgeVue from "../Base/Badge.vue";
-import type { BadgeTone } from "../../types/ui";
+import BadgeVue from "@components/Base/Badge.vue";
+import type { BadgeTone } from "~types/ui";
 
 export interface Props {
   title: string;

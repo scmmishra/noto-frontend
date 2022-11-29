@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import Avatar from "../Base/Avatar.vue";
+import Avatar from "@components/Base/Avatar.vue";
 import {
   MailCheck,
   Settings,
   FileText,
-  Archive,
   Edit3,
   FlaskConical,
 } from "lucide-vue-next";

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { formatDate } from "../utils/date";
-import Avatar from "../components/Base/Avatar.vue";
+import { formatDate } from "@utils/date";
+import Avatar from "@components/Base/Avatar.vue";
 
 const publishedPosts = [
   {
