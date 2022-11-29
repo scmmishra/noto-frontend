@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { formatDate } from "@utils/date";
 import Avatar from "@components/Base/Avatar.vue";
+import WideDashboard from "@layouts/WideDashboard.vue";
 
 const publishedPosts = [
   {
@@ -51,12 +52,7 @@ const publishedPosts = [
 </script>
 
 <template>
-  <main class="grid space-y-6 py-8">
-    <section class="space-y-2 px-6 flex items-center justify-between">
-      <h1 class="text-2xl leading-8 text-black-999 font-extrabold">
-        Changelogs
-      </h1>
-    </section>
+  <WideDashboard title="Changelogs">
     <section>
       <div
         class="grid grid-cols-4 gap-5 py-5 uppercase text-[13px] tracking-wider font-semibold text-black-400 px-6"
@@ -95,5 +91,5 @@ const publishedPosts = [
         </li>
       </ul>
     </section>
-  </main>
+  </WideDashboard>
 </template>
