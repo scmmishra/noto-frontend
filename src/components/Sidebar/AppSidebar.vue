@@ -26,7 +26,7 @@ const orgName = "Chatwoot";
         class="flex gap-x-2 items-center hover:bg-black-100 p-1 rounded-lg"
       >
         <div
-          class="rounded-lg bg-gradient-to-t from-blue-600 to-blue-400 w-6 h-6"
+          class="rounded-lg bg-gradient-to-tr from-blue-400 to-pink-400 w-6 h-6"
         ></div>
         <span class="font-normal text-sm leading-none">{{ orgName }}</span>
       </button>
