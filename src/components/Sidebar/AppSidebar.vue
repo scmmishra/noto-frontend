@@ -42,13 +42,26 @@ const orgName = "Chatwoot";
     >
       <div class="space-y-8">
         <SidebarGroup title="Changelogs">
-          <SidebarItem link="/" title="Published" badge-text="70">
+          <SidebarItem
+            link="/"
+            title="Published"
+            badge-text="70"
+            :active="route.name === 'home'"
+          >
             <FileText class="h-4 w-4" />
           </SidebarItem>
-          <SidebarItem link="/drafts" title="Drafts">
+          <SidebarItem
+            link="/drafts"
+            title="Drafts"
+            :active="route.name === 'drafts'"
+          >
             <Edit3 class="h-4 w-4" />
           </SidebarItem>
-          <SidebarItem link="/subscribers" title="Subscribers">
+          <SidebarItem
+            link="/subscribers"
+            title="Subscribers"
+            :active="route.name === 'subscribers'"
+          >
             <MailCheck class="h-4 w-4" />
           </SidebarItem>
         </SidebarGroup>
