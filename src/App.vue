@@ -29,7 +29,6 @@ onErrorCaptured(() => {
 .with-sidebar {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .with-sidebar > :first-child {
