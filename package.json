@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-api": "swagger-typescript-api -p ./openapi.json -o ./src/types -n api.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.6",
@@ -21,6 +22,7 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
     "prettier": "^2.8.0",
+    "swagger-typescript-api": "^12.0.2",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.6.4",
     "vite": "^3.2.3",

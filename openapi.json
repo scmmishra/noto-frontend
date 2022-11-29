@@ -1,0 +1,912 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/teams": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Get Teams",
+        "description": "Get all teams.",
+        "operationId": "get_teams_teams_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "title": "Offset",
+              "type": "integer",
+              "default": 0
+            },
+            "name": "offset",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Limit",
+              "type": "integer",
+              "default": 100,
+              "lte": 100
+            },
+            "name": "limit",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Get Teams Teams Get",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeamRead"
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Create A Team",
+        "description": "Create a team.",
+        "operationId": "create_a_team_teams_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TeamCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teams/{team_id}": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Get A Team",
+        "description": "Get a team by id.",
+        "operationId": "get_a_team_teams__team_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Team Id",
+              "type": "integer"
+            },
+            "name": "team_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Delete A Team",
+        "description": "Delete a team by id.",
+        "operationId": "delete_a_team_teams__team_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Team Id",
+              "type": "integer"
+            },
+            "name": "team_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Update A Team",
+        "description": "Update a team.",
+        "operationId": "update_a_team_teams__team_id__patch",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Team Id",
+              "type": "integer"
+            },
+            "name": "team_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TeamUpdate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Get Posts",
+        "description": "Get all teams.",
+        "operationId": "get_posts_posts_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "title": "Offset",
+              "type": "integer",
+              "default": 0
+            },
+            "name": "offset",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Limit",
+              "type": "integer",
+              "default": 100,
+              "lte": 100
+            },
+            "name": "limit",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Get Posts Posts Get",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChangelogPostRead"
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Create A Post",
+        "description": "Create a team.",
+        "operationId": "create_a_post_posts_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangelogPostCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChangelogPostRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/posts/{team_id}/{post_slug}": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Get A Post",
+        "description": "Get a team by id.",
+        "operationId": "get_a_post_posts__team_id___post_slug__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Team Id",
+              "type": "integer"
+            },
+            "name": "team_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Post Slug",
+              "type": "string"
+            },
+            "name": "post_slug",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChangelogPostRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Delete A Post",
+        "description": "Delete a team by id.",
+        "operationId": "delete_a_post_posts__team_id___post_slug__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Team Id",
+              "type": "integer"
+            },
+            "name": "team_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Post Slug",
+              "type": "string"
+            },
+            "name": "post_slug",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Update A Post",
+        "description": "Update a team.",
+        "operationId": "update_a_post_posts__team_id___post_slug__patch",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Team Id",
+              "type": "integer"
+            },
+            "name": "team_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": {
+              "title": "Post Slug",
+              "type": "string"
+            },
+            "name": "post_slug",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangelogPostUpdate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChangelogPostRead"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/build-demo": {
+      "get": {
+        "summary": "Build Demo",
+        "description": "Build demo data",
+        "operationId": "build_demo_build_demo_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChangelogPostCreate": {
+        "title": "ChangelogPostCreate",
+        "required": [
+          "title",
+          "slug",
+          "shortDescription",
+          "content",
+          "authorId"
+        ],
+        "type": "object",
+        "properties": {
+          "createdOn": {
+            "title": "Createdon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "title": "Updatedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "title": {
+            "title": "Title",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "slug": {
+            "title": "Slug",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "shortDescription": {
+            "title": "Shortdescription",
+            "maxLength": 250,
+            "type": "string"
+          },
+          "content": {
+            "title": "Content",
+            "type": "string"
+          },
+          "heroImage": {
+            "title": "Heroimage",
+            "maxLength": 65536,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "forTeamId": {
+            "title": "Forteamid",
+            "type": "integer"
+          },
+          "tags": {
+            "title": "Tags",
+            "type": "string"
+          },
+          "publishedOn": {
+            "title": "Publishedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "authorId": {
+            "title": "Authorid",
+            "type": "integer"
+          }
+        },
+        "description": "TimeStampMixin to add created_on and updated_on dates"
+      },
+      "ChangelogPostRead": {
+        "title": "ChangelogPostRead",
+        "required": [
+          "title",
+          "slug",
+          "shortDescription",
+          "content",
+          "authorId"
+        ],
+        "type": "object",
+        "properties": {
+          "createdOn": {
+            "title": "Createdon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "title": "Updatedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "title": {
+            "title": "Title",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "slug": {
+            "title": "Slug",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "shortDescription": {
+            "title": "Shortdescription",
+            "maxLength": 250,
+            "type": "string"
+          },
+          "content": {
+            "title": "Content",
+            "type": "string"
+          },
+          "heroImage": {
+            "title": "Heroimage",
+            "maxLength": 65536,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "forTeamId": {
+            "title": "Forteamid",
+            "type": "integer"
+          },
+          "tags": {
+            "title": "Tags",
+            "type": "string"
+          },
+          "publishedOn": {
+            "title": "Publishedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "authorId": {
+            "title": "Authorid",
+            "type": "integer"
+          }
+        },
+        "description": "TimeStampMixin to add created_on and updated_on dates"
+      },
+      "ChangelogPostUpdate": {
+        "title": "ChangelogPostUpdate",
+        "required": [
+          "title",
+          "slug",
+          "shortDescription",
+          "content"
+        ],
+        "type": "object",
+        "properties": {
+          "createdOn": {
+            "title": "Createdon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "title": "Updatedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "title": {
+            "title": "Title",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "slug": {
+            "title": "Slug",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "shortDescription": {
+            "title": "Shortdescription",
+            "maxLength": 250,
+            "type": "string"
+          },
+          "content": {
+            "title": "Content",
+            "type": "string"
+          },
+          "heroImage": {
+            "title": "Heroimage",
+            "maxLength": 65536,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "forTeamId": {
+            "title": "Forteamid",
+            "type": "integer"
+          },
+          "tags": {
+            "title": "Tags",
+            "type": "string"
+          },
+          "publishedOn": {
+            "title": "Publishedon",
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "description": "TimeStampMixin to add created_on and updated_on dates"
+      },
+      "HTTPValidationError": {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "TeamCreate": {
+        "title": "TeamCreate",
+        "required": [
+          "name",
+          "subdomain"
+        ],
+        "type": "object",
+        "properties": {
+          "createdOn": {
+            "title": "Createdon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "title": "Updatedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "subdomain": {
+            "title": "Subdomain",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "websiteUrl": {
+            "title": "Websiteurl",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "logo": {
+            "title": "Logo",
+            "maxLength": 65536,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "tagline": {
+            "title": "Tagline",
+            "type": "string"
+          }
+        },
+        "description": "TimeStampMixin to add created_on and updated_on dates"
+      },
+      "TeamRead": {
+        "title": "TeamRead",
+        "required": [
+          "name",
+          "subdomain",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "createdOn": {
+            "title": "Createdon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "title": "Updatedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "subdomain": {
+            "title": "Subdomain",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "websiteUrl": {
+            "title": "Websiteurl",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "logo": {
+            "title": "Logo",
+            "maxLength": 65536,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "tagline": {
+            "title": "Tagline",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "integer"
+          }
+        },
+        "description": "TimeStampMixin to add created_on and updated_on dates"
+      },
+      "TeamUpdate": {
+        "title": "TeamUpdate",
+        "required": [
+          "name",
+          "subdomain"
+        ],
+        "type": "object",
+        "properties": {
+          "createdOn": {
+            "title": "Createdon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "title": "Updatedon",
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "subdomain": {
+            "title": "Subdomain",
+            "maxLength": 50,
+            "type": "string"
+          },
+          "websiteUrl": {
+            "title": "Websiteurl",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "logo": {
+            "title": "Logo",
+            "maxLength": 65536,
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
+          },
+          "tagline": {
+            "title": "Tagline",
+            "type": "string"
+          }
+        },
+        "description": "TimeStampMixin to add created_on and updated_on dates"
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "loc": {
+            "title": "Location",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
