@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Card from "../components/Base/Card.vue";
 import { formatDate } from "../utils/date";
 </script>
 
@@ -11,6 +10,6 @@ import { formatDate } from "../utils/date";
       </h1>
       <time class="text-sm text-black-600">{{ formatDate() }}</time>
     </section>
-    <Card class="p-6"> HW </Card>
+    <Section class="p-6"> </Section>
   </main>
 </template>

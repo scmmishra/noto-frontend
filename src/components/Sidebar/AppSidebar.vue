@@ -21,7 +21,7 @@ const orgName = "Chatwoot";
   >
     <div class="flex justify-between items-center p-2">
       <button
-        class="flex gap-x-2 items-center hover:bg-gray-100 p-1 rounded-lg"
+        class="flex gap-x-2 items-center hover:bg-black-100 p-1 rounded-lg"
       >
         <div
           class="rounded-lg bg-gradient-to-t from-blue-600 to-blue-400 w-6 h-6"

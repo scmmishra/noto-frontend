@@ -6,12 +6,13 @@ export interface Props {
 withDefaults(defineProps<Props>(), {
   title: null,
 });
-
 </script>
 
 <template>
   <nav class="space-y-1">
-    <div v-if="title" class="text-gray-500 px-4 pb-2.5 text-sm">{{ title }}</div>
+    <div v-if="title" class="text-black-500 px-4 pb-2.5 text-sm">
+      {{ title }}
+    </div>
     <slot></slot>
   </nav>
 </template>
