@@ -10,6 +10,9 @@ import {
 
 import SidebarItem from "./SidebarItem.vue";
 import SidebarGroup from "./SidebarGroup.vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
 
 const orgName = "Chatwoot";
 </script>
@@ -39,13 +42,13 @@ const orgName = "Chatwoot";
     >
       <div class="space-y-8">
         <SidebarGroup title="Changelogs">
-          <SidebarItem title="Published" badge-text="70">
+          <SidebarItem link="/" title="Published" badge-text="70">
             <FileText class="h-4 w-4" />
           </SidebarItem>
-          <SidebarItem title="Drafts">
+          <SidebarItem link="/drafts" title="Drafts">
             <Edit3 class="h-4 w-4" />
           </SidebarItem>
-          <SidebarItem title="Subscribers">
+          <SidebarItem link="/subscribers" title="Subscribers">
             <MailCheck class="h-4 w-4" />
           </SidebarItem>
         </SidebarGroup>
