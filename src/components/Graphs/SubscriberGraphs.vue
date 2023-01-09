@@ -28,7 +28,7 @@ function getDuration(value: number) {
   <div class="grid grid-cols-[repeat(30,_minmax(0,_1fr))] px-6 h-60">
     <div
       v-for="count in subscriptions"
-      class="border-dotted border-r first:border-l border-black-200 flex items-end justify-center hover:bg-black-100"
+      class="border-dotted border-r first:border-l border-gray-200 flex items-end justify-center hover:bg-gray-100"
     >
       <div
         :style="{
@@ -40,7 +40,7 @@ function getDuration(value: number) {
       ></div>
     </div>
   </div>
-  <div class="grid grid-cols-2 text-xs text-black-600 px-6 mt-2">
+  <div class="grid grid-cols-2 text-xs text-gray-600 px-6 mt-2">
     <time>{{ formatDate(subtractDate(30)) }}</time>
     <time class="text-right">{{ formatDate() }}</time>
   </div>

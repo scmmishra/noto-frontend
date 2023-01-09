@@ -19,11 +19,11 @@ const orgName = "Chatwoot";
 
 <template>
   <div
-    class="bg-white h-screen p-3 pt-5 flex flex-col drop-shadow-sm border-r border-black-100"
+    class="bg-white h-screen p-3 pt-5 flex flex-col drop-shadow-sm border-r border-gray-100"
   >
     <div class="flex justify-between items-center p-2">
       <button
-        class="flex gap-x-2 items-center hover:bg-black-100 p-1 rounded-lg"
+        class="flex gap-x-2 items-center hover:bg-gray-100 p-1 rounded-lg"
       >
         <div
           class="rounded-lg bg-gradient-to-tr from-blue-400 to-pink-400 w-6 h-6"

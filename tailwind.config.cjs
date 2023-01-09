@@ -16,7 +16,7 @@ module.exports = {
         800: "#9d174d",
         900: "#831843",
       },
-      black: {
+      gray: {
         100: "#F3F3F5",
         150: "#ECECEC",
         200: "#E5E5E5",

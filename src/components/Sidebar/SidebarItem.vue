@@ -32,12 +32,12 @@ const buttonType = computed(() => {
 
 const state = computed(() => {
   if (props.disabled) {
-    return "text-black-500 pointer-events-none";
+    return "text-gray-500 pointer-events-none";
   }
   if (props.active) {
-    return "text-black-900 bg-black-100";
+    return "text-gray-900 bg-gray-100";
   }
-  return "text-black-700 hover:text-black-900 hover:bg-black-100";
+  return "text-gray-700 hover:text-gray-900 hover:bg-gray-100";
 });
 </script>
 

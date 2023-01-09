@@ -23,7 +23,7 @@ const toneState = computed(() => {
     return "bg-orange-100 text-orange-700";
   }
 
-  return "bg-black-100 text-black-500";
+  return "bg-gray-100 text-gray-500";
 });
 </script>
 <template>

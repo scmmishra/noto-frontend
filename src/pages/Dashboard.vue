@@ -55,7 +55,7 @@ const publishedPosts = [
   <WideDashboard title="Changelogs">
     <section>
       <div
-        class="grid grid-cols-4 gap-5 py-5 uppercase text-[13px] tracking-wider font-semibold text-black-400 px-6"
+        class="grid grid-cols-4 gap-5 py-5 uppercase text-[13px] tracking-wider font-semibold text-gray-400 px-6"
       >
         <div class="col-span-2">Title</div>
         <div class="col-span-1 text-right">Author</div>
@@ -64,18 +64,18 @@ const publishedPosts = [
       <ul>
         <li
           v-for="post in publishedPosts"
-          class="grid grid-cols-4 gap-5 py-4 border-t border-black-200 last:border-b hover:bg-black-100/50 px-6 cursor-pointer"
+          class="grid grid-cols-4 gap-5 py-4 border-t border-gray-200 last:border-b hover:bg-gray-100/50 px-6 cursor-pointer"
         >
           <div class="col-span-2">
-            <h3 class="text-black-800 text-lg font-medium">
+            <h3 class="text-gray-800 text-lg font-medium">
               {{ post.title }}
             </h3>
-            <p class="truncate text-black-600 text-sm tracking-wide">
+            <p class="truncate text-gray-600 text-sm tracking-wide">
               {{ post.shortDescription }}
             </p>
           </div>
           <div class="col-span-1 flex items-center justify-end">
-            <span class="text-sm text-black-600 flex items-center gap-2">
+            <span class="text-sm text-gray-600 flex items-center gap-2">
               <Avatar
                 :image="post.author.avatar"
                 :name="post.author.firstName"
@@ -84,7 +84,7 @@ const publishedPosts = [
             </span>
           </div>
           <div class="col-span-1 flex items-center justify-end">
-            <time class="text-sm text-black-600">
+            <time class="text-sm text-gray-600">
               {{ formatDate(post.publishedOn) }}
             </time>
           </div>
