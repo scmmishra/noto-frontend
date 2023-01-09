@@ -2,6 +2,7 @@
 import { formatDate } from "@utils/date";
 import Avatar from "@components/Base/Avatar.vue";
 import WideDashboard from "@layouts/WideDashboard.vue";
+import { Plus } from "lucide-vue-next";
 
 const publishedPosts = [
   {
@@ -53,6 +54,19 @@ const publishedPosts = [
 
 <template>
   <WideDashboard title="Changelogs">
+    <template #header-control>
+      <input
+        type="text"
+        class="bg-gray-100 rounded-md px-4 py-1"
+        placeholder="Search ⌘ + K"
+      />
+      <button
+        class="bg-gray-999 hover:bg-gray-900 rounded-md text-white px-4 py-1 text-sm flex items-center gap-2"
+      >
+        <Plus class="h-4 w-4" />
+        <span>New Post</span>
+      </button>
+    </template>
     <section>
       <div
         class="grid grid-cols-4 gap-5 py-5 uppercase text-[13px] tracking-wider font-semibold text-gray-400 px-6"

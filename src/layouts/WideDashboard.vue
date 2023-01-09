@@ -6,10 +6,15 @@ defineProps<{
 
 <template>
   <main class="grid space-y-6 py-8">
-    <section class="space-y-2 px-6 flex items-center justify-between">
-      <h1 class="text-2xl leading-8 text-gray-999 font-extrabold">
-        {{ title }}
-      </h1>
+    <section class="px-6 grid grid-cols-1 md:grid-cols-[300px_1fr]">
+      <div class="flex items-center">
+        <h1 class="text-2xl leading-8 text-gray-999 font-extrabold">
+          {{ title }}
+        </h1>
+      </div>
+      <div class="flex justify-end gap-2">
+        <slot name="header-control"></slot>
+      </div>
     </section>
     <section>
       <slot> </slot>
