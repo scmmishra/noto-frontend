@@ -6,7 +6,10 @@ defineProps<{
 
 <template>
   <main class="grid space-y-6 py-8">
-    <section class="px-6 grid grid-cols-1 md:grid-cols-[300px_1fr]">
+    <section
+      v-if="title"
+      class="px-6 grid grid-cols-1 md:grid-cols-[300px_1fr]"
+    >
       <div class="flex items-center">
         <h1 class="text-2xl leading-8 text-gray-999 font-extrabold">
           {{ title }}

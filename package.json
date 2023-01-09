@@ -10,8 +10,22 @@
     "generate-api": "swagger-typescript-api -p ./openapi.json -o ./src/types -n api.ts"
   },
   "dependencies": {
+    "@tiptap/core": "2.0.0-beta.209",
+    "@tiptap/starter-kit": "2.0.0-beta.209",
+    "@tiptap/vue-3": "2.0.0-beta.209",
+    "core,": "link:@tiptap/core,",
     "dayjs": "^1.11.6",
     "lucide-vue-next": "^0.102.0",
+    "prosemirror-commands": "^1.5.0",
+    "prosemirror-dropcursor": "^1.6.1",
+    "prosemirror-gapcursor": "^1.3.1",
+    "prosemirror-history": "^1.3.0",
+    "prosemirror-keymap": "^1.2.0",
+    "prosemirror-model": "^1.18.3",
+    "prosemirror-schema-list": "^1.2.2",
+    "prosemirror-state": "^1.4.2",
+    "prosemirror-transform": "^1.7.0",
+    "prosemirror-view": "^1.29.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },
